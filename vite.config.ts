@@ -11,4 +11,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+    build: {
+    outDir: 'dist'
+  },
+  // This helps with correct base path in production
+  base: '/'
 });
