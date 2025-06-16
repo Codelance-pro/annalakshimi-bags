@@ -24,7 +24,8 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary-950/70 to-primary-950/40 z-10" />
           <img
             src={image}
-            loading='lazy'
+            loading='eager'
+            fetchPriority='high'
             alt="Jute Bags and Coton Bags"
             className="w-full h-full object-cover"
           />
