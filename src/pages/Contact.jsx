@@ -5,7 +5,7 @@ import PageTransition from '../components/ui/PageTransition';
 import Button from '../components/ui/Button';
 
 const Contact = () => {
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [formStatus, setFormStatus] = useState('idle');
   
   const handleSubmit = (e) => {
     e.preventDefault();
