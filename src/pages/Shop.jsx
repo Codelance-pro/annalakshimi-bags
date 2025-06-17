@@ -127,12 +127,17 @@ const Shop = () => {
     useEffect(() => {
     if (categorySlug) {
         const category = allCategories.find(cat => slugify(cat.name) === categorySlug);
+        console.log("category", category);
         if (category) {
             setActiveCategory(category.id);
             filterProducts(category.id);
         }
+        else {
+            setActiveCategory("All");
+            fetchData()
+        }
     } else {
-        fetchData(); // load all products
+        fetchData();
     }
 }, [categorySlug, allCategories])
 
@@ -140,8 +145,6 @@ const Shop = () => {
         try {
             const response = await axios.get('https://jute-be-production.up.railway.app/api/products?populate=image'); // Replace with your API endpoint
             const data = response.data.data;
-            // const dd = data.map((product) => (product.image.url))
-            // console.log(`${imageurl}${dd}`);
             console.log("data", data);
             setProducts(data);
         } catch (error) {

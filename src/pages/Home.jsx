@@ -24,7 +24,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary-950/70 to-primary-950/40 z-10" />
           <img
             src={image}
-            loading='eager'
+            loading='lazy'
             fetchPriority='high'
             alt="Jute Bags and Coton Bags"
             className="w-full h-full object-cover"
@@ -88,7 +88,7 @@ const Home = () => {
           >
             <h2 className="mb-4"> Explore Our Jute Bag And Wedding Bags Collections</h2>
             <p className="text-primary-600 max-w-xl mx-auto">
-               Discover premium eco-friendly jute bags—perfect for shopping, weddings, and everyday essentials.
+              Discover premium eco-friendly jute bags—perfect for shopping, weddings, and everyday essentials.
             </p>
           </motion.div>
 
@@ -116,12 +116,14 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="absolute inset-0 bg-primary-950/30 group-hover:bg-primary-950/20 transition-all duration-300 z-10" />
                 <img
                   src={category.image}
                   alt={category.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
@@ -141,42 +143,42 @@ const Home = () => {
         <FeaturedProducts />
       </Suspense>
 
-    {/* Brand Story */}
-<section className="py-20 bg-primary-50">
-  <div className="container-custom">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-      >
-        <img
-          src={brand}
-          alt="Artisan stitching a jute bag"
-          className="rounded-lg shadow-xl w-full h-auto"
-        />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, x: 30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <h2 className="mb-6 text-3xl font-bold text-primary-900">Sustainable Craftsmanship in Every Stitch</h2>
-        <p className="text-primary-700 mb-6 text-lg">
-          At our core, we specialize in eco-friendly jute bags, traditional manja pai wedding bags, and durable cotton shoppers handcrafted by skilled artisans from South India.
-        </p>
-        <p className="text-primary-700 mb-8 text-lg">
-          Every bag tells a story of sustainability, culture, and heritage—designed to support green living while celebrating Indian craftsmanship. Whether it’s for daily use or special occasions, our products combine beauty and purpose.
-        </p>
-        <Button href="/about" variant="primary">
-          Discover Our Story
-        </Button>
-      </motion.div>
-    </div>
-  </div>
-</section>
+      {/* Brand Story */}
+      <section className="py-20 bg-primary-50">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <img
+                src={brand}
+                alt="Artisan stitching a jute bag"
+                className="rounded-lg shadow-xl w-full h-auto"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h2 className="mb-6 text-3xl font-bold text-primary-900">Sustainable Craftsmanship in Every Stitch</h2>
+              <p className="text-primary-700 mb-6 text-lg">
+                At our core, we specialize in eco-friendly jute bags, traditional manja pai wedding bags, and durable cotton shoppers handcrafted by skilled artisans from South India.
+              </p>
+              <p className="text-primary-700 mb-8 text-lg">
+                Every bag tells a story of sustainability, culture, and heritage—designed to support green living while celebrating Indian craftsmanship. Whether it’s for daily use or special occasions, our products combine beauty and purpose.
+              </p>
+              <Button href="/about" variant="primary">
+                Discover Our Story
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Collections */}

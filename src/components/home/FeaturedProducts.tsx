@@ -8,7 +8,7 @@ import jute from '../../../assets/product-jute.jpg';
 const products = [
   {
     id: 1,
-    name: "Classic Tote",
+    name: "Classic-Tote",
     price: 249.99,
     image: `${jute}`,
     category: "totes",
@@ -85,6 +85,8 @@ const FeaturedProducts = () => {
                   <img
                     src={product.image}
                     alt={product.name}
+                    loading="lazy"
+                     decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -99,7 +101,7 @@ const FeaturedProducts = () => {
                     className="w-full"
                   >
                     <Button
-                      href={`/product/${product.id}`}
+                      href={`/shop/${product.name}`}
                       variant="primary"
                       className="w-full flex items-center justify-center gap-2"
                     >
