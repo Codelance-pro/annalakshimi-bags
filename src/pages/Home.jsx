@@ -9,7 +9,7 @@ import brand from '../../assets/brand.webp';
 // Lazy-loaded components
 const FeaturedProducts = lazy(() => import('../components/home/FeaturedProducts'));
 const InstagramFeed = lazy(() => import('../components/home/InstagramFeed'));
- const FeaturedCategory = lazy(() => import('../components/home/FeaturedCategory'));
+const FeaturedCategory = lazy(() => import('../components/home/FeaturedCategory'));
 
 const Home = () => {
   return (
@@ -21,7 +21,6 @@ const Home = () => {
           <img
             src={image}
             loading='lazy'
-            
             alt="Jute Bags and Coton Bags"
             className="w-full h-full object-cover"
           />

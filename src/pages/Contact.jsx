@@ -6,7 +6,7 @@ import Button from '../components/ui/Button';
 
 const Contact = () => {
   const [formStatus, setFormStatus] = useState('idle');
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormStatus('submitting');
@@ -25,7 +25,7 @@ const Contact = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        
+
         <div className="container-custom relative z-20">
           <motion.div
             className="max-w-xl"
@@ -33,7 +33,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <motion.h1 
+            <motion.h1
               className="text-white mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ const Contact = () => {
             >
               Contact Us
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-white/90 text-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl font-serif font-bold mb-8">Get In Touch</h2>
-              
+
               <div className="space-y-8 mb-12">
                 <div className="flex items-start">
                   <div className="bg-white p-3 rounded-full shadow-sm mr-4">
@@ -73,7 +73,7 @@ const Contact = () => {
                     <h3 className="font-medium text-lg mb-1">Email Us</h3>
                     <p className="text-primary-600 mb-1">For general inquiries:</p>
                     <a href="mailto:info@luxebags.com" className="text-accent-600 hover:text-accent-700 transition-colors">
-                      info@luxebags.com
+                      suriyanarayanan1331@gmail.com
                     </a>
                     <p className="text-primary-600 mt-2 mb-1">For customer support:</p>
                     <a href="mailto:support@luxebags.com" className="text-accent-600 hover:text-accent-700 transition-colors">
@@ -81,7 +81,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-white p-3 rounded-full shadow-sm mr-4">
                     <Phone className="text-accent-600 h-6 w-6" />
@@ -89,16 +89,12 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-lg mb-1">Call Us</h3>
                     <p className="text-primary-600 mb-1">Customer Service:</p>
-                    <a href="tel:+18005551234" className="text-accent-600 hover:text-accent-700 transition-colors">
-                      +1 (800) 555-1234
-                    </a>
-                    <p className="text-primary-600 mt-2 mb-1">Corporate Office:</p>
-                    <a href="tel:+12125557890" className="text-accent-600 hover:text-accent-700 transition-colors">
-                      +1 (212) 555-7890
+                    <a href="tel:+916374286960" className="text-accent-600 hover:text-accent-700 transition-colors">
+                      91 6374286960
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-white p-3 rounded-full shadow-sm mr-4">
                     <MapPin className="text-accent-600 h-6 w-6" />
@@ -117,7 +113,7 @@ const Contact = () => {
                     </address>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-white p-3 rounded-full shadow-sm mr-4">
                     <Clock className="text-accent-600 h-6 w-6" />
@@ -126,8 +122,8 @@ const Contact = () => {
                     <h3 className="font-medium text-lg mb-1">Hours</h3>
                     <p className="text-primary-600 mb-1">Stores:</p>
                     <p className="text-primary-700">
-                      Monday - Saturday: 10am - 7pm<br />
-                      Sunday: 12pm - 5pm
+                      Monday - Saturday: 10am - 9pm<br />
+                      Sunday: 11am - 5pm
                     </p>
                     <p className="text-primary-600 mt-2 mb-1">Customer Service:</p>
                     <p className="text-primary-700">
@@ -137,7 +133,7 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="font-medium text-lg mb-4">Connect With Us</h3>
                 <p className="text-primary-600 mb-4">
@@ -167,7 +163,7 @@ const Contact = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -176,7 +172,7 @@ const Contact = () => {
               className="bg-white rounded-lg shadow-sm p-8"
             >
               <h2 className="text-2xl font-serif font-bold mb-6">Send Us a Message</h2>
-              
+
               {formStatus === 'success' ? (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -222,7 +218,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-primary-700 mb-1">
@@ -248,7 +244,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
                     <label htmlFor="subject" className="block text-sm font-medium text-primary-700 mb-1">
                       Subject*
@@ -261,7 +257,7 @@ const Contact = () => {
                       className="w-full px-4 py-2 border border-primary-200 rounded-md focus:border-accent-500 focus:ring-1 focus:ring-accent-500 outline-none transition-colors"
                     />
                   </div>
-                  
+
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-primary-700 mb-1">
                       Message*
@@ -274,7 +270,7 @@ const Contact = () => {
                       className="w-full px-4 py-2 border border-primary-200 rounded-md focus:border-accent-500 focus:ring-1 focus:ring-accent-500 outline-none transition-colors"
                     ></textarea>
                   </div>
-                  
+
                   <Button
                     type="submit"
                     variant="accent"
@@ -296,7 +292,7 @@ const Contact = () => {
                       </>
                     )}
                   </Button>
-                  
+
                   <p className="text-sm text-primary-500 mt-4">
                     Fields marked with * are required.
                   </p>
@@ -310,7 +306,7 @@ const Contact = () => {
       {/* Map Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -340,7 +336,7 @@ const Contact = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               className="rounded-lg overflow-hidden shadow-sm h-80 bg-primary-100"
               initial={{ opacity: 0, y: 20 }}
@@ -364,7 +360,7 @@ const Contact = () => {
       {/* FAQ Section */}
       <section className="py-20 bg-primary-50">
         <div className="container-custom">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -381,27 +377,32 @@ const Contact = () => {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               {[
                 {
-                  question: "What is the warranty period for LUXE bags?",
-                  answer: "All LUXE bags come with a 2-year warranty that covers manufacturing defects. Additionally, we offer lifetime repairs for a reasonable fee on all our products, helping extend their life for generations."
+                  question: "What is the warranty period for your bags?",
+                  answer:
+                    "Our eco-friendly jute and cotton bags come with a 1-year warranty against manufacturing defects. We are committed to long-lasting quality and craftsmanship in every piece we deliver."
                 },
                 {
-                  question: "How do I care for my leather bag?",
-                  answer: "We recommend cleaning your bag with a soft, dry cloth regularly. Apply a quality leather conditioner every 3-6 months to maintain the leather's suppleness. Avoid exposure to extreme heat, water, and direct sunlight. Store your bag in the provided dust bag when not in use."
+                  question: "How should I care for my jute or cotton bag?",
+                  answer:
+                    "Gently clean your bag with a soft, dry brush or cloth. Avoid machine washing. In case of stains, use mild soap with cold water and spot clean. Keep your bag in a dry place and avoid prolonged exposure to direct sunlight or moisture."
                 },
                 {
-                  question: "Do you ship internationally?",
-                  answer: "Yes, we ship to most countries worldwide. International shipping rates and delivery times vary by location. You can see the exact rates at checkout after entering your shipping address."
+                  question: "Do you offer international shipping?",
+                  answer:
+                    "Yes, we ship globally. International shipping charges are calculated at checkout based on your location. Delivery times may vary depending on the destination."
                 },
                 {
-                  question: "What is your return policy?",
-                  answer: "We offer a 30-day return policy for unused items in original packaging. Free returns are available for orders within the United States. International returns are accepted, but return shipping costs are the responsibility of the customer."
+                  question: "What is your exchange policy?",
+                  answer:
+                    "We offer exchanges within 7 days for unused items in original condition. Please note that we do not offer refunds or returns. Exchanges are subject to availability and shipping costs may apply."
                 },
                 {
-                  question: "Can I have my bag personalized?",
-                  answer: "Yes, we offer monogramming services for most of our products. You can add up to three initials for an additional fee. Please note that personalized items are final sale and cannot be returned."
+                  question: "Can I personalize my bag?",
+                  answer:
+                    "Yes, we offer custom name or logo printing on select jute and cotton bags. Personalization charges may vary. Customized products are final sale and not eligible for exchange."
                 }
               ].map((faq, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="border-b border-primary-100 last:border-b-0"
                   initial={{ opacity: 0, y: 20 }}
@@ -425,8 +426,8 @@ const Contact = () => {
                 </motion.div>
               ))}
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="text-center mt-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
