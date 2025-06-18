@@ -45,6 +45,7 @@ const products = [
 
 const ProductDetail = () => {
     const { id } = useParams()
+    const productId = id.split('-')[0]
     const location = useLocation()
     //   const product = products.find(p => p.id === id) || products[0];
     const [product, setProducts] = useState([])
@@ -65,9 +66,11 @@ const ProductDetail = () => {
 
     useEffect(() => {
         const fetchImages = async () => {
+            console.log("id",productId)
+            console.log("idssss",id)
             try {
                 const response = await axios.get(
-                    `https://jute-be-production.up.railway.app/api/pictures?filters[product][id][$eq]=${id}&populate=image`
+                    `https://jute-be-production.up.railway.app/api/pictures?filters[product][id][$eq]=${productId}&populate=image`
                 );
 
                 const fetchedImages = response.data.data.flatMap(picture =>
