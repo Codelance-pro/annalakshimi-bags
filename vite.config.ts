@@ -15,5 +15,5 @@ export default defineConfig({
     outDir: 'dist'
   },
   // This helps with correct base path in production
-  base: '/'
+  base: '/annalakshimi-bags/'
 });
