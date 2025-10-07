@@ -89,7 +89,7 @@ const Header = () => {
     return (
         <>
             <motion.header
-                className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+                className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent  py-4'
                     }`}
                 variants={headerVariants}
                 initial="initial"
@@ -98,8 +98,8 @@ const Header = () => {
                 <div className="container-custom flex items-center justify-between">
                     {/* Logo */}
                     <Link to="/" className="z-10" onClick={closeMenu}>
-                        <h1 className={`text-2xl font-bold font-serif ${isScrolled || isMenuOpen ? 'text-primary-900' : 'text-white'}`}>
-                            Anna Lakshmi
+                        <h1 className={`text-2xl font-bold font-serif ${isScrolled || isMenuOpen ? 'text-primary-900' : 'text-primary-900'}`}>
+                            AnnaLakshmi Bags
                         </h1>
                     </Link>
 
@@ -185,7 +185,7 @@ const Header = () => {
                     <div className="flex items-center space-x-4 lg:hidden">
                         <button
                             onClick={() => setIsSearchDrawerOpen(true)}
-                            className={`p-2 rounded-full transition-colors duration-200 ${isScrolled ? 'text-primary-800 hover:bg-primary-100' : 'text-white hover:bg-white/10'
+                            className={`p-2 rounded-full transition-colors duration-200 ${isScrolled ? 'text-primary-800 hover:bg-primary-100' : 'text-primary-800 hover:bg-primary-100'
                                 }`}
                             aria-label="Search"
                         >
@@ -193,7 +193,7 @@ const Header = () => {
                         </button>
                         <button
                             onClick={toggleMenu}
-                            className={`p-2 rounded-full transition-colors duration-200 ${isScrolled ? 'text-primary-800 hover:bg-primary-100' : 'text-white hover:bg-white/10'
+                            className={`p-2 rounded-full transition-colors duration-200 ${isScrolled ? 'text-primary-800 hover:bg-primary-100' : 'text-primary-800 hover:bg-primary-100'
                                 }`}
                             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                         >

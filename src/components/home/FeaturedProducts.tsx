@@ -3,45 +3,36 @@ import { motion } from 'framer-motion';
 import { ShoppingBag, Heart } from 'lucide-react';
 import Button from '../ui/Button';
 import jute from '../../../assets/product-jute.jpg';
+import tote from '../../../assets/tote.jpg';
+import wedding from '../../../assets/wedding.jpg';
+import { Link } from 'react-router-dom';
 
 // Mock data - would be fetched from Strapi in real implementation
 const products = [
   {
     id: 1,
-    name: "Classic-Tote",
-    price: 249.99,
+    name: "Jute Bag",
     image: `${jute}`,
-    category: "totes",
-    isNew: true,
+    category: "Jute",
+    isNew: false,
     colors: ["Black", "Brown", "Tan"]
   },
   {
     id: 2,
-    name: "Urban Backpack",
-    price: 189.99,
-    image: "https://images.pexels.com/photos/2081199/pexels-photo-2081199.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "backpacks",
-    isNew: false,
-    colors: ["Black", "Navy"]
+    name: "Classic Tote Bag",
+    image: `${tote}`,
+    category: "Tote Bags",
+    isNew: true,
+    colors: ["Black", "White"]
   },
   {
     id: 3,
-    name: "Mini Crossbody",
-    price: 159.99,
-    image: "https://images.pexels.com/photos/6624862/pexels-photo-6624862.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "crossbody",
+    name: "Wedding Bag",
+    image: `${wedding}`,
+    category: "Wedding Bags",
     isNew: true,
     colors: ["Black", "Burgundy", "Cream"]
   },
-  {
-    id: 4,
-    name: "Business Briefcase",
-    price: 299.99,
-    image: "https://images.pexels.com/photos/6624859/pexels-photo-6624859.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "briefcases",
-    isNew: false,
-    colors: ["Black", "Brown"]
-  }
 ];
 
 const FeaturedProducts = () => {
@@ -50,6 +41,7 @@ const FeaturedProducts = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container-custom">
+        {/* Section Header */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -57,13 +49,16 @@ const FeaturedProducts = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-4 text-3xl font-bold text-primary-900">Featured Jute Bags</h2>
+          <h2 className="mb-4 text-3xl font-bold text-primary-900">
+            Featured Jute Bags
+          </h2>
           <p className="text-primary-600 max-w-xl mx-auto text-lg">
             Explore our top-selling jute and cotton bags, known for their eco-friendly materials, elegant designs, and everyday functionality.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -76,12 +71,15 @@ const FeaturedProducts = () => {
               onMouseLeave={() => setHoveredProduct(null)}
             >
               <div className="bg-primary-50 rounded-lg overflow-hidden relative mb-4">
+                {/* New Arrival Badge */}
                 {product.isNew && (
                   <div className="absolute top-3 left-3 z-10 bg-accent-600 text-white text-xs font-medium px-2 py-1 rounded">
                     New Arrival
                   </div>
                 )}
-                <div className="aspect-square overflow-hidden">
+
+                {/* Image Wrapper (Increased height) */}
+                <div className="w-full overflow-hidden  sm:h-[32rem] md:h-[36rem]">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -89,9 +87,11 @@ const FeaturedProducts = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
+
+                {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
 
-                {/* Quick actions */}
+                {/* Quick View Button */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between items-center">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ const FeaturedProducts = () => {
                   </motion.div>
                 </div>
 
-                {/* Wishlist button */}
+                {/* Wishlist Button */}
                 <motion.button
                   className="absolute top-3 right-3 bg-white/80 hover:bg-white text-primary-900 p-2 rounded-full"
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -122,13 +122,13 @@ const FeaturedProducts = () => {
                 </motion.button>
               </div>
 
+              {/* Product Info */}
               <div className="text-center">
                 <h3 className="font-medium text-lg mb-1">
                   <a href={`/product/${product.id}`} className="hover:text-accent-600 transition-colors">
                     {product.name}
                   </a>
                 </h3>
-                <p className="text-primary-900 font-semibold">${product.price.toFixed(2)}</p>
                 <div className="mt-2 flex justify-center gap-1">
                   {product.colors.map((color) => (
                     <span key={color} className="text-sm text-primary-500">
@@ -141,6 +141,7 @@ const FeaturedProducts = () => {
           ))}
         </div>
 
+        {/* View All Button */}
         <div className="mt-12 text-center">
           <Button href="/shop" variant="secondary">
             View All Products

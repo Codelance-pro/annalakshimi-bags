@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import categoryjute from '../../../assets/category-jute.webp';
-import kattapai from '../../../assets/kattapai.jpg';
+import tote from '../../../assets/tote.jpg';
 import weddingbags from '../../../assets/weddingbags.webp';
 import Button from '../ui/Button';
 
@@ -32,7 +32,7 @@ const FeaturedCategory = () => {
               },
               {
                 title: "Big Shopper",
-                image: `${kattapai}`,
+                image: `${tote}`,
                 link: "/shop/big-shopper"
               },
               {

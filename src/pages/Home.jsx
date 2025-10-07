@@ -4,7 +4,7 @@ import PageTransition from '../components/ui/PageTransition';
 import image from '../../assets/pexels-qhung999-18652087.jpg'
 import Button from '../components/ui/Button';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
-import brand from '../../assets/brand.webp';
+import brand from '../../assets/brand.jpg';
 
 // Lazy-loaded components
 const FeaturedProducts = lazy(() => import('../components/home/FeaturedProducts'));
@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <PageTransition>
       {/* Hero Section */}
-      <section className="relative h-screen-90 flex items-center">
+      <section className="relative h-screen-90 flex items-center mt-16 md:mt-0">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary-950/70 to-primary-950/40 z-10" />
           <img
@@ -34,7 +34,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.h1
-              className="text-white mb-6 text-4xl md:text-5xl font-bold"
+              className="text-white mb-6 text-4xl md:text-5xl font-bold mt-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -72,9 +72,9 @@ const Home = () => {
       </section>
 
       {/* Featured Categories */}
-      <Suspense fallback={<LoadingSpinner />}>
+      {/* <Suspense fallback={<LoadingSpinner />}>
         <FeaturedCategory />
-      </Suspense>
+      </Suspense> */}
 
       {/* Featured Products */}
       <Suspense fallback={<LoadingSpinner />}>
@@ -93,22 +93,25 @@ const Home = () => {
             >
               <img
                 src={brand}
-                alt="Artisan stitching a jute bag"
+                alt="Stylish tote bags arranged aesthetically"
                 className="rounded-lg shadow-xl w-full h-auto"
               />
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="mb-6 text-3xl font-bold text-primary-900">Sustainable Craftsmanship in Every Stitch</h2>
+              <h2 className="mb-6 text-3xl font-bold text-primary-900">
+                Everyday Style Meets Eco-Friendly Design
+              </h2>
               <p className="text-primary-700 mb-6 text-lg">
-                At our core, we specialize in eco-friendly jute bags, traditional manja pai wedding bags, and durable cotton shoppers handcrafted by skilled artisans from South India.
+                Our tote bags are designed for those who love a perfect mix of fashion and functionality. Whether you're heading to college, work, shopping, or a weekend outing, these totes fit seamlessly into your lifestyle.
               </p>
               <p className="text-primary-700 mb-8 text-lg">
-                Every bag tells a story of sustainability, culture, and heritage—designed to support green living while celebrating Indian craftsmanship. Whether it’s for daily use or special occasions, our products combine beauty and purpose.
+                Made from high-quality, sustainable materials, each tote bag is a reusable alternative to plastic, combining durability with timeless style. With versatile designs and spacious interiors, they’re ideal for both everyday use and special occasions.
               </p>
               <Button href="/about" variant="primary">
                 Discover Our Story
@@ -117,6 +120,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
 
 
       {/* Collections */}
