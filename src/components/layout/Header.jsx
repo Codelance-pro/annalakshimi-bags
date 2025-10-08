@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShoppingBag, Search, User } from 'lucide-react';
 import axios from 'axios';
+import logo from '../../../assets/logo.png';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,7 +73,7 @@ const Header = () => {
         { name: 'Home', path: '/' },
         { name: 'Shop', path: '/shop' },
         { name: 'About', path: '/about' },
-        { name: 'Blog', path: '/blog' },
+        // { name: 'Blog', path: '/blog' },
         { name: 'Contact', path: '/contact' },
     ];
 

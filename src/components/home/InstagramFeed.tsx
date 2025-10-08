@@ -1,47 +1,53 @@
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
+import insta1 from '../../../assets/insta1.jpeg';
+import insta2 from '../../../assets/insta2.jpeg';
+import insta3 from '../../../assets/insta3.jpeg';
+import insta4 from '../../../assets/insta4.jpeg';
+import insta5 from '../../../assets/insta5.jpeg';
+import insta6 from '../../../assets/insta6.jpeg';
 
 // Mock data - would be fetched from Instagram API or Strapi in real implementation
 const instagramPosts = [
   {
     id: 1,
-    image: "https://images.pexels.com/photos/2002717/pexels-photo-2002717.jpeg?auto=compress&cs=tinysrgb&w=600",
-    link: "https://instagram.com",
+    image: `${insta1}`,
+    link: "https://www.instagram.com/annalakshmi_jute_bagss?igsh=MXY5cWRyZmxsa3QzdQ==",
     likes: 124,
     comments: 8
   },
   {
     id: 2,
-    image: "https://images.pexels.com/photos/934673/pexels-photo-934673.jpeg?auto=compress&cs=tinysrgb&w=600",
-    link: "https://instagram.com",
+    image: `${insta2}`,
+    link: "https://www.instagram.com/annalakshmi_jute_bagss?igsh=MXY5cWRyZmxsa3QzdQ==",
     likes: 98,
     comments: 5
   },
   {
     id: 3,
-    image: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600",
-    link: "https://instagram.com",
+    image: `${insta3}`,
+    link: "https://www.instagram.com/annalakshmi_jute_bagss?igsh=MXY5cWRyZmxsa3QzdQ==",
     likes: 203,
     comments: 12
   },
   {
     id: 4,
-    image: "https://images.pexels.com/photos/1039518/pexels-photo-1039518.jpeg?auto=compress&cs=tinysrgb&w=600",
-    link: "https://instagram.com",
+    image: `${insta4}`,
+    link: "https://www.instagram.com/annalakshmi_jute_bagss?igsh=MXY5cWRyZmxsa3QzdQ==",
     likes: 156,
     comments: 9
   },
   {
     id: 5,
-    image: "https://images.pexels.com/photos/1214212/pexels-photo-1214212.jpeg?auto=compress&cs=tinysrgb&w=600",
-    link: "https://instagram.com",
+    image: `${insta5}`,
+    link: "https://www.instagram.com/annalakshmi_jute_bagss?igsh=MXY5cWRyZmxsa3QzdQ==",
     likes: 178,
     comments: 11
   },
   {
     id: 6,
-    image: "https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=600",
-    link: "https://instagram.com",
+    image: `${insta6}`,
+    link: "https://www.instagram.com/annalakshmi_jute_bagss?igsh=MXY5cWRyZmxsa3QzdQ==",
     likes: 143,
     comments: 7
   }
@@ -60,16 +66,16 @@ const InstagramFeed = () => {
         >
           <h2 className="mb-4">Follow Our Journey</h2>
           <p className="text-primary-600 max-w-xl mx-auto mb-4">
-            Join our community and share your LUXE bag stories with us on Instagram.
+            Join our community and share your Annalakshimi bag stories with us on Instagram.
           </p>
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/annalakshmi_jute_bagss?igsh=MXY5cWRyZmxsa3QzdQ==" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center font-medium text-accent-600 hover:text-accent-700 transition-colors"
           >
             <Instagram size={20} className="mr-2" />
-            @luxebags
+            @Annalakshimi_bags
           </a>
         </motion.div>
 

@@ -35,9 +35,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-serif font-bold mb-6">LUXE</h3>
+            <h3 className="text-2xl font-serif font-bold mb-6">Annalakshimi</h3>
             <p className="text-primary-200 mb-6 max-w-xs">
-              Crafting premium leather bags with timeless design and uncompromising quality since 2010.
+              Crafting premium Cotton bags with timeless design and uncompromising quality since 1980.
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-accent-400 transition-colors" aria-label="Instagram">
@@ -60,17 +60,12 @@ const Footer = () => {
                 <Link to="/shop?category=totes" className="text-primary-200 hover:text-white transition-colors">Tote Bags</Link>
               </li>
               <li>
-                <Link to="/shop?category=crossbody" className="text-primary-200 hover:text-white transition-colors">Crossbody Bags</Link>
+                <Link to="/shop?category=crossbody" className="text-primary-200 hover:text-white transition-colors">Jute Bags</Link>
               </li>
               <li>
-                <Link to="/shop?category=backpacks" className="text-primary-200 hover:text-white transition-colors">Backpacks</Link>
+                <Link to="/shop?category=backpacks" className="text-primary-200 hover:text-white transition-colors">Wedding Bags</Link>
               </li>
-              <li>
-                <Link to="/shop?category=wallets" className="text-primary-200 hover:text-white transition-colors">Wallets</Link>
-              </li>
-              <li>
-                <Link to="/shop?category=accessories" className="text-primary-200 hover:text-white transition-colors">Accessories</Link>
-              </li>
+          
             </ul>
           </motion.div>
 
@@ -87,9 +82,9 @@ const Footer = () => {
               <li>
                 <Link to="/about#sustainability" className="text-primary-200 hover:text-white transition-colors">Sustainability</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/blog" className="text-primary-200 hover:text-white transition-colors">Blog</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/contact" className="text-primary-200 hover:text-white transition-colors">Contact Us</Link>
               </li>
@@ -131,9 +126,9 @@ const Footer = () => {
           variants={itemVariants}
         >
           <p className="text-primary-400 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} LUXE. All rights reserved.
+            &copy; {currentYear} Annalakshimi. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm">
+          {/* <div className="flex space-x-6 text-sm">
             <Link to="/privacy-policy" className="text-primary-300 hover:text-white transition-colors">
               Privacy Policy
             </Link>
@@ -143,7 +138,7 @@ const Footer = () => {
             <Link to="/shipping-returns" className="text-primary-300 hover:text-white transition-colors">
               Shipping & Returns
             </Link>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </motion.footer>
